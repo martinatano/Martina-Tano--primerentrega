@@ -1,7 +1,13 @@
-import './navbar.css';
+import './Navbar.css';
 
-const navbar = () => {
-    return ( <h1>hola</h1>);
+const Navbar = () => {
+    return ( <AppBar>
+        <Toolbar>
+            <Button>
+                
+            </Button>
+        </Toolbar>
+    </AppBar>);
 }
 
-export default navbar;
+export default Navbar;
