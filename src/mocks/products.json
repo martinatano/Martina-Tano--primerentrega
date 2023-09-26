@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "image": "product1.jpeg",
+      "image": "https://acdn.mitiendanube.com/stores/192/145/products/bdark-filtro1-d9d1f5510b11fc96e216524561753473-1024-1024.jpeg",
       "title": "Café Brasil Dark",
       "price": 19.99,
       "category": "Cafe",
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "image": "product2.jpeg",
+      "image": "https://acdn.mitiendanube.com/stores/192/145/products/huila-france1-71f937123fd63a609816524583387578-1024-1024.jpeg",
       "title": "Café Colombia Laboyano",
       "category": "Cafe",
       "price": 29.99,
@@ -21,7 +21,7 @@
     },
     {
       "id": 3,
-      "image": "product3.jpeg",
+      "image": "https://http2.mlstatic.com/D_Q_NP_763094-MLU70651392540_072023-O.webp",
       "title": "Café Bolivia Honey",
       "price": 39.99,
       "category": "Cafe",
@@ -31,7 +31,7 @@
     },
     {
       "id": 4,
-      "image": "product4.jpg",
+      "image": "https://acdn.mitiendanube.com/stores/192/145/products/geisha-gigante-granos1-8a2b88fcb52e16b1d416654998193354-1024-1024.png",
       "title": "Café Colombia Geisha",
       "price": 49.99,
       "category": "Cafe",
@@ -41,7 +41,7 @@
     },
     {
       "id": 5,
-      "image": "product5.jpg",
+      "image": "https://d22fxaf9t8d39k.cloudfront.net/eb8a6d9c637b4e6d0372fac06a9b3465e8188efb9fc7bdd4100debf16d9428e194880.jpg",
       "title": "Taza Magnolia",
       "price": 59.99,
       "category": "Vajilla",
@@ -51,7 +51,7 @@
     },
     {
       "id": 6,
-      "image": "product6.jpeg",
+      "image": "https://chimpa.com.ar/wp-content/uploads/2019/07/JOEY-ROSA.jpg",
       "title": "Taza Amber",
       "price": 69.99,
       "category": "Vajilla",
@@ -61,7 +61,7 @@
     },
     {
       "id": 7,
-      "image": "product7.jpg",
+      "image": "https://acdn.mitiendanube.com/stores/001/254/659/products/img_20230617_190120_6301-7953f807ad73020fa016870440890650-1024-1024.jpg",
       "title": "Taza Malena",
       "price": 79.99,
       "category": "Vajilla",
@@ -72,7 +72,7 @@
     },
     {
       "id": 8,
-      "image": "product8.jpeg",
+      "image": "https://d2r9epyceweg5n.cloudfront.net/stores/274/552/products/palto-puercoespin1-31072c7f4fd19e051e16633433485711-640-0.png",
       "title": "Plato Wild",
       "price": 89.99,
       "category": "Vajilla",
@@ -83,7 +83,7 @@
     },
     {
       "id": 9,
-      "image": "product9.jpeg",
+      "image": "https://d2r9epyceweg5n.cloudfront.net/stores/274/552/products/plato-conejo1-44d943b30eae5075d616633434857133-640-0.png",
       "title": "Plato Wild",
       "price": 99.99,
       "category": "Vajilla",
@@ -94,7 +94,7 @@
     },
     {
       "id": 10,
-      "image": "product10.png",
+      "image": "https://d2r9epyceweg5n.cloudfront.net/stores/274/552/products/plato-buho1-c24f43b48796b45ace16243245079608-640-01-2e24bd001626df85c716633437768136-640-0.png",
       "title": "Plato Wild",
       "price": 109.99,
       "category": "Vajilla",
@@ -105,7 +105,7 @@
     },
     {
       "id": 11,
-      "image": "product11.png",
+      "image": "https://d2r9epyceweg5n.cloudfront.net/stores/274/552/products/plato-oso1-63260b48060a150a2116633436477214-640-0.jpg",
       "title": "Plato Wild",
       "price": 119.99,
       "category": "Vajilla",
@@ -116,7 +116,7 @@
     },
     {
       "id": 12,
-      "image": "product12.jpeg",
+      "image": "https://hotmart.s3.amazonaws.com/product_pictures/ed25ded1-5923-4b4a-81bd-c8df82022f9b/masvendidobarista.jpg",
       "title": "Curso Barista",
       "price": 129.99,
       "category": "Cursos",
@@ -127,7 +127,7 @@
     },
     {
       "id": 13,
-      "image": "product13.webp",
+      "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/Cafe.png",
       "title": "Arte en Latte",
       "price": 139.99,
       "category": "Cursos",
