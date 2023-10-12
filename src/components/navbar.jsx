@@ -8,18 +8,15 @@ const Navbar = () => {
         <Toolbar sx={{ display: "flex", justifyContent: "space-around" }}>
             <NavLink className="navbar-link" to="/">
                 <Typography>
-                    Cofee shop Marleene.
+                    Cofee shop Marleene | Categorias
                 </Typography>
-            </NavLink>
-            <NavLink className="navbar-link" to="/">
-                <Button sx={{ color: "white" }}>
-                    Categorias
-                </Button>
             </NavLink>
             <NavLink className="navbar-link" to="/products">
                 <Button sx={{ color: "white" }}>
                     Productos
                 </Button>
+            </NavLink> 
+            <NavLink className="navbar-link" to="/cart">
                 <CartWidget>
 
                 </CartWidget>

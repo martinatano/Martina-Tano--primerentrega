@@ -1,9 +1,20 @@
 import { Modal, Typography } from "@mui/material";
 import PaymentIcon from '@mui/icons-material/Payment'
 import ItemCount from "../common/ItemCount";
-import { useState } from "react";
+import { memo, useContext, useState } from "react";
+import { CartContext } from "../../context/CartContext";
+
+
+function areEqual(prevProps, nextProps){
+    return(
+        prevProps.product === nextProps.product &&
+        prevProps.open === nextProps.open
+    );
+}
+
 const ProductInfo = ({ product, open, setOpen }) => {
-    const { image, title, price, isAnOffer, itHasDues, stock } = product
+    const { id, image, title, price, isAnOffer, itHasDues, stock } = product
+    const {addToCart} = useContext(CartContext)
     const [quantityInCart, setQuantityInCart] = useState(0);
 
 
@@ -16,7 +27,14 @@ const ProductInfo = ({ product, open, setOpen }) => {
     const handleAddToCart = (count) => {
         setQuantityInCart(count);
         console.log('agregado', count)
+        if(count>0){
+            addToCart({
+                id, title, image, price, quantity: count
+            })
+        }
     };
+
+
 
 
     return (<>
@@ -40,4 +58,4 @@ const ProductInfo = ({ product, open, setOpen }) => {
     </>);
 }
 
-export default ProductInfo;
+export default memo(ProductInfo, areEqual);

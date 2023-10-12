@@ -3,8 +3,9 @@ import ProductInfo from "./ProductInfo";
 import { useState } from "react";
 
 const ProductDetail = ({ product, children }) => {
-    const { id, image, title, price, itHadDues, isAnOffer, stock } = product
+    const { id, image, title, price, itHasDues, isAnOffer, stock } = product
     const [isSelected, setIsSelected] = useState(false);
+
 
     const handleClick = () => {
         setIsSelected((prev) => !prev)
