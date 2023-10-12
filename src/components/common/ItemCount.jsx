@@ -26,6 +26,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         }
     };
 
+
     return (
         <div>
             <button onClick={handleDecrement} disabled={count <= initial}>-</button>

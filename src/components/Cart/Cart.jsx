@@ -42,6 +42,7 @@ const Cart = () => {
                                         <TableCell>{item.title}</TableCell>
                                         <TableCell>${item.price}</TableCell>
                                         <TableCell>${item.price * item.quantity}</TableCell>
+                                        <button onClick = {handleRemoveFromCart} disabled = {count > 0} >eliminar </button>
                                     </TableRow>
                                 ))}
                                 <TableRow>
