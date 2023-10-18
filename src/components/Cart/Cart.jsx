@@ -10,6 +10,7 @@ import {
     Typography,
 } from "@mui/material";
 import { useCartContext } from "../../context/CartContext";
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const { cart, removeFromCart, clearCart} = useCartContext();
@@ -48,7 +49,17 @@ const Cart = () => {
                                 <TableRow>
                                     <TableCell colSpan={3}>Total:</TableCell>
                                     <TableCell>${cart.total.toFixed(2)}</TableCell>
-                                    <TableCell><button onClick = {() => clearCart()}> Vaciar carrito</button></TableCell>
+                                   
+                                </TableRow>
+                                <TableRow> 
+                                    <TableCell> </TableCell>
+                                    <TableCell><button onClick = {() => clearCart()} className="cart-button"> Vaciar carrito</button></TableCell>
+                                    <TableCell> 
+                                        <button className="finish-button">
+                                        <Link to = "/detalle-compra">Terminar compra </Link>
+                                        </button>
+                                        </TableCell>
+
                                 </TableRow>
 
                             </TableBody>

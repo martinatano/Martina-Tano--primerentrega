@@ -9,20 +9,24 @@ const Categories = () => {
     if (loading) return <CircularProgress />
 
     return (<div className="container">
-        <Typography variant="h2" sytle={{ color: "#8f8C8C" }}>
-            Categorias
-        </Typography>
-        {
-            data.map((category) => {
-                return (
-                    <Card key={category.id}>
-                        <CardContent component={Link} to={`/category/${category.category}`}>
-                            <Typography >{category.category}</Typography>
-                        </CardContent>
-                    </Card>
-                )
-            })
-        }
+        <div className="home-container">
+            <div className="home-content">
+                <h1>Bienvenido a Cafetería Marleene</h1>
+                <p>Lo mejor en café y repostería.</p>
+            </div>
+        </div>
+        <div className="categories-container">
+      <Typography variant="h2" style={{ color: "#8f8C8C" }}>
+        Categorias
+      </Typography>
+      {data.map((category) => (
+        <Card key={category.id} className="category-card">
+          <CardContent component={Link} to={`/category/${category.category}`} className="category-link">
+            <Typography className="category-text">{category.category}</Typography>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
     </div>);
 }
 

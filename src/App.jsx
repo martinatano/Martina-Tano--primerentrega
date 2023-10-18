@@ -6,6 +6,7 @@ import CategoriesProductList from './components/categories/CategoriesProductList
 import Navbar from './components/Navbar'
 import Cart from './components/Cart/Cart'
 import CartProvider from './context/CartContext'
+import UserRegistrationForm from './components/Cart/UserRegistrationForm'
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
             <Route exact path="/products" element={<ProductList />} />
             <Route exact path="/category/:categoryId" element={<CategoriesProductList />} />
             <Route exact path="/cart" element={<Cart />} />
+            <Route path="/detalle-compra" element={<UserRegistrationForm />} />
+
           </Routes>
         </Router>
       </CartProvider>
