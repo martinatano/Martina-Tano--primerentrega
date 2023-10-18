@@ -16,16 +16,27 @@ const CartProvider = ({ children }) => {
     }
 
     const removeFromCart = (product) => {
-        const updatedCart = cart.filter((item) => item.id !== product.id);
-        setCart(updatedCart);
+         setCart((prevCart) => ({
+             ...prevCart, items: prevCart.items.filter((item)=> item.id !== product.id)
+         }))
+       
+     };
+
+     const clearCart = () => {
+        setCart({
+            items: [],
+            total: 0
+        });
     };
+    
+    
+     
 
-
-    return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
-            {children}
-        </CartContext.Provider>
-    )
+return (
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart}}>
+        {children}
+    </CartContext.Provider>
+)
 
 
 }

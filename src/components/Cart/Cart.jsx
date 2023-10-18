@@ -12,7 +12,7 @@ import {
 import { useCartContext } from "../../context/CartContext";
 
 const Cart = () => {
-    const { cart } = useCartContext();
+    const { cart, removeFromCart, clearCart} = useCartContext();
 
     return (
         <div className="container">
@@ -42,13 +42,15 @@ const Cart = () => {
                                         <TableCell>{item.title}</TableCell>
                                         <TableCell>${item.price}</TableCell>
                                         <TableCell>${item.price * item.quantity}</TableCell>
-                                        <button onClick = {handleRemoveFromCart} disabled = {count > 0} >eliminar </button>
+                                       <TableCell> <button onClick = {()=> removeFromCart(item)} style = {{color: "red"}}>X </button></TableCell>
                                     </TableRow>
                                 ))}
                                 <TableRow>
                                     <TableCell colSpan={3}>Total:</TableCell>
                                     <TableCell>${cart.total.toFixed(2)}</TableCell>
+                                    <TableCell><button onClick = {() => clearCart()}> Vaciar carrito</button></TableCell>
                                 </TableRow>
+
                             </TableBody>
                         </Table>
                     </TableContainer>
