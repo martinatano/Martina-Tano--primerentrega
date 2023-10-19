@@ -1,4 +1,3 @@
-import React from "react";
 import {
     Paper,
     Table,
@@ -11,9 +10,20 @@ import {
 } from "@mui/material";
 import { useCartContext } from "../../context/CartContext";
 import { Link } from 'react-router-dom';
+import UserRegistrationForm from './UserRegistrationForm'; // Asegúrate de usar la ubicación correcta del archivo del formulario de usuario
 
 const Cart = () => {
-    const { cart, removeFromCart, clearCart} = useCartContext();
+    const { cart, removeFromCart, clearCart } = useCartContext();
+    const handleCompletePurchase = () => {
+        const orderDetails = {
+            productos: cart.items.map(item => ({
+                productId: item.id,
+                cantidad: item.quantity,
+            })),
+            total: cart.total,
+        };
+        sendOrderDetailsToForm(orderDetails);
+    }
 
     return (
         <div className="container">
@@ -43,24 +53,25 @@ const Cart = () => {
                                         <TableCell>{item.title}</TableCell>
                                         <TableCell>${item.price}</TableCell>
                                         <TableCell>${item.price * item.quantity}</TableCell>
-                                       <TableCell> <button onClick = {()=> removeFromCart(item)} style = {{color: "red"}}>X </button></TableCell>
+                                        <TableCell> <button onClick={() => removeFromCart(item)} style={{ color: "red" }}>X </button></TableCell>
                                     </TableRow>
                                 ))}
                                 <TableRow>
                                     <TableCell colSpan={3}>Total:</TableCell>
                                     <TableCell>${cart.total.toFixed(2)}</TableCell>
-                                   
-                                </TableRow>
-                                <TableRow> 
-                                    <TableCell> </TableCell>
-                                    <TableCell><button onClick = {() => clearCart()} className="cart-button"> Vaciar carrito</button></TableCell>
-                                    <TableCell> 
-                                        <button className="finish-button">
-                                        <Link to = "/detalle-compra">Terminar compra </Link>
-                                        </button>
-                                        </TableCell>
 
                                 </TableRow>
+                                <TableRow>
+                                    <TableCell> </TableCell>
+                                    <TableCell><button onClick={() => clearCart()} className="cart-button"> Vaciar carrito</button></TableCell>
+                                    <TableCell>
+                                        <button onClick={handleCompletePurchase} className="finish-button">
+                                            <Link to="/detalle-compra">Terminar compra </Link>
+                                        </button>
+                                    </TableCell>
+
+                                </TableRow>
+
 
                             </TableBody>
                         </Table>
@@ -72,3 +83,4 @@ const Cart = () => {
 };
 
 export default Cart;
+
