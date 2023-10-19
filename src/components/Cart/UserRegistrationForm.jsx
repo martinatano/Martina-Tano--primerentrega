@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext} from 'react';
 import { TextField, Button, Typography } from '@mui/material';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { CartContext } from '../../context/CartContext';
 
 function UserRegistrationForm() {
   const [firstName, setFirstName] = useState('');
@@ -11,24 +12,30 @@ function UserRegistrationForm() {
   const [phone, setPhone] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [isEmailValid, setIsEmailValid] = useState(false);
+  const { cart, total, clearCart} = useContext(CartContext);
 
-  const handleSubmit = async (e) => {
+
+    const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Verificar que ambos correos electrónicos sean iguales
     if (email === confirmEmail) {
       // Aquí puedes manejar la lógica para enviar o procesar la información del formulario
-      const userData = {
+      const order = {
         firstName: firstName,
         lastName: lastName,
         userEmail: email,
         phoneNumber: phone,
         userAdress: address,
+        item: cart,
+        total: cart.total,
+        date: serverTimestamp(),
       }; 
       const db = getFirestore();
-      const usersCollection = collection(db, 'usuario');
-      await addDoc(usersCollection, userData);
-
+      const usersCollection = collection(db, 'orders');
+      addDoc(usersCollection, order);
+      const respuesta = await addDoc(usersCollection, order)
+      console.log(respuesta);
       // Muestra una alerta de agradecimiento
       alert('¡Gracias por tu compra!');
 
@@ -115,7 +122,7 @@ function UserRegistrationForm() {
           />
           </div>
           <Button type="submit" variant="contained" color="primary" disabled={!isEmailValid}>
-            Enviar
+            Generar orden
           </Button>
         </form>
         </div>

@@ -1,9 +1,12 @@
-# React + Vite
+# Cafe marleene
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cafe marleene es un proyecto que nacio el 22 de agosto de 2023 con mucha ilusion, y muchos altibajos. Por momentos pense que no lo iba a lograr, pero aca está despues de mucho trabajo. 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Martina-Tano--primerentrega
+## Authors
+
+- [@martinatano](https://www.github.com/martinatano)
+
+
+## 🛠 Skills
+Javascript, HTML, CSS, ReactJS
